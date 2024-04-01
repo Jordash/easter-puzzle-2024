@@ -1,0 +1,375 @@
+<%- include('partials/header.ejs'); %>
+<h1>Easter Puzzle 2024</h1>
+<% if (locals.right === 1) { %>
+  <h2 class="right">That answer is right.</h2>
+  <p class="right-prompt">Nice job!</p>
+<% } %>
+<% if (locals.wrong === 1) { %>
+  <h2 class="wrong">Sorry, that answer is wrong.</h2>
+  <p class="wrong-prompt">Please try another answer.</p>
+<% } %>
+<%-include('partials/form.ejs'); %>
+<%#
+<section id="puzzle-1">
+  < Row 1 >
+  <div class="piece">
+    <img id="p1" src="img/puzzle-corner-3.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p2" src="img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p3" src="img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p4" src="img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p5" src="img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p6" src="img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p7" src="img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p8" src="img/puzzle-corner-2.svg" width="100" height="auto" class="" />
+  </div>
+  < Row 2 >
+  <div class="piece">
+    <img id="p9" src="img/puzzle-edge-4.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p10" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p11" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p12" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p13" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p14" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p15" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p16" src="img/puzzle-edge-5.svg" width="100" height="auto" class="" />
+  </div>
+  < Row 3 >
+  <div class="piece">
+    <img id="p17" src="img/puzzle-edge-6.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p18" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p19" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p20" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p21" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p22" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p23" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <div class="piece">
+    <img id="p24" src="img/puzzle-edge-2.svg" width="100" height="auto" class="" />
+    </div>
+  < Row 4 >
+  <div class="piece">
+    <img id="p25" src="img/puzzle-edge-4.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p26" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p27" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p28" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p29" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p30" src="img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p31" src="img/puzzle-center.svg" width="100" height="auto" class="" />
+  </div>    
+  <div class="piece">
+    <img id="p32" src="img/puzzle-edge-5.svg" width="100" height="auto" class="" />
+  </div>   
+  < Row 5 >
+  <div class="piece">
+    <img id="p33" src="img/puzzle-corner-4.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p34" src="img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p35" src="img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p36" src="img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p37" src="img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p38" src="img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p39" src="img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+  </div>
+  <div class="piece">
+    <img id="p40" src="img/puzzle-corner-1.svg" width="100" height="auto" class="" />
+  </div>
+</section>
+%>
+
+<section id="puzzle-2">
+  <%# Row 1 %>
+  <% if ( (locals.pieces.indexOf("p1") > -1) ) { %>
+    <div id="p1" class="piece">
+      <img src="/img/puzzle-corner-3.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p2") > -1) ) { %>
+    <div id="p2" class="piece">
+      <img src="/img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p3") > -1) ) { %>
+    <div id="p3" class="piece">
+      <img src="/img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p4") > -1) ) { %>
+    <div id="p4" class="piece">
+      <img src="/img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p5") > -1) ) { %>
+    <div id="p5" class="piece">
+      <img src="/img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p6") > -1) ) { %>
+    <div id="p6" class="piece">
+      <img src="/img/puzzle-edge-1.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p7") > -1) ) { %>
+    <div id="p7" class="piece">
+      <img src="/img/puzzle-edge-3.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p8") > -1) ) { %>
+    <div id="p8" class="piece">
+      <img src="/img/puzzle-corner-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <%# Row 2 %>
+  <% if ( (locals.pieces.indexOf("p9") > -1) ) { %>
+    <div id="p9" class="piece">
+      <img src="/img/puzzle-edge-4.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p10") > -1) ) { %>
+  <div id="p10" class="piece">
+    <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+  </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p11") > -1) ) { %>
+    <div id="p11" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p12") > -1) ) { %>
+    <div id="p12" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p13") > -1) ) { %>
+    <div id="p13" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p14") > -1) ) { %>
+    <div id="p14" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p15") > -1) ) { %>
+    <div id="p15" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p16") > -1) ) { %>
+    <div id="p16" class="piece">
+      <img src="/img/puzzle-edge-5.svg" width="100" height="auto" class="" />
+    </div> 
+  <% } %>
+  <%# Row 3 %>
+  <% if ( (locals.pieces.indexOf("p17") > -1) ) { %>
+    <div id="p17" class="piece">
+      <img src="/img/puzzle-edge-6.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p18") > -1) ) { %>
+    <div id="p18" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p19") > -1) ) { %>
+    <div id="p19" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p20") > -1) ) { %>
+    <div id="p20" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+    <% } %>
+  <% if ( (locals.pieces.indexOf("p21") > -1) ) { %>
+  <div id="p21" class="piece">
+    <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+    <% } %>
+  <% if ( (locals.pieces.indexOf("p22") > -1) ) { %>
+    <div id="p22" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+    <% } %>
+  <% if ( (locals.pieces.indexOf("p23") > -1) ) { %>
+    <div id="p23" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+    <% } %>
+  <% if ( (locals.pieces.indexOf("p24") > -1) ) { %>
+    <div id="p24" class="piece">
+      <img src="/img/puzzle-edge-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <%# Row 4 %>
+  <% if ( (locals.pieces.indexOf("p25") > -1) ) { %>
+    <div id="p25" class="piece">
+      <img src="/img/puzzle-edge-4.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p26") > -1) ) { %>
+    <div id="p26" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p27") > -1) ) { %>
+    <div id="p27" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p28") > -1) ) { %>
+    <div id="p28" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p29") > -1) ) { %>
+    <div id="p29" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p30") > -1) ) { %>
+    <div id="p30" class="piece">
+      <img src="/img/puzzle-center-2.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p31") > -1) ) { %>
+    <div id="p31" class="piece">
+      <img src="/img/puzzle-center.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p32") > -1) ) { %>    
+    <div id="p32" class="piece">
+      <img src="/img/puzzle-edge-5.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <%# Row 5 %>
+  <% if ( (locals.pieces.indexOf("p33") > -1) ) { %>   
+    <div id="p33" class="piece">
+      <img src="/img/puzzle-corner-4.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p34") > -1) ) { %>
+    <div id="p34" class="piece">
+      <img src="/img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p35") > -1) ) { %>
+    <div id="p35" class="piece">
+      <img src="/img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p36") > -1) ) { %>
+    <div id="p36" class="piece">
+      <img src="/img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p37") > -1) ) { %>
+    <div id="p37" class="piece">
+      <img src="/img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p38") > -1) ) { %>
+    <div id="p38" class="piece">
+      <img src="/img/puzzle-edge-7.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p39") > -1) ) { %>
+    <div id="p39" class="piece">
+      <img src="/img/puzzle-edge-8.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+  <% if ( (locals.pieces.indexOf("p40") > -1) ) { %>
+    <div id="p40" class="piece">
+      <img src="/img/puzzle-corner-1.svg" width="100" height="auto" class="" />
+    </div>
+  <% } %>
+</section>
+  <ol>
+    <li><a href="/clue/0/">Clue 0</a></li>
+    <li><a href="/clue/1/">Clue 1</a></li>
+    <li><a href="/clue/2/">Clue 2</a></li>
+    <li><a href="/clue/3/">Clue 3</a></li>
+    <li><a href="/clue/4/">Clue 4</a></li>
+    <li><a href="/clue/5/">Clue 5</a></li>
+    <li><a href="/clue/6/">Clue 6</a></li>
+    <li><a href="/clue/7/">Clue 7</a></li>
+    <li><a href="/clue/8/">Clue 8</a></li>
+    <li><a href="/clue/9/">Clue 9</a></li>
+    <li><a href="/clue/10/">Clue 10</a></li>
+    <li><a href="/clue/11/">Clue 11</a></li>
+    <li><a href="/clue/12/">Clue 12</a></li>
+    <li><a href="/clue/13/">Clue 13</a></li>
+    <li><a href="/clue/14/">Clue 14</a></li>
+    <li><a href="/clue/15/">Clue 15</a></li>
+    <li><a href="/clue/16/">Clue 16</a></li>
+    <li><a href="/clue/17/">Clue 17</a></li>
+    <li><a href="/clue/18/">Clue 18</a></li>
+    <li><a href="/clue/19/">Clue 19</a></li>
+    <li><a href="/clue/20/">Clue 20</a></li>
+  </ol>
+
+  <p><a href="/clear/">Clear</a></p>
+
+<%- include('partials/footer.ejs'); %>

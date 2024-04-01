@@ -1,0 +1,14 @@
+<% console.log("locals.id: ", locals.id); %>
+<% let id = locals.id; %>
+
+<form id="form" action="/submit/<%= id %>" method="post">
+  <div class="close">
+    <img src="/img/icon-close.svg" alt="close" width="25" height="25" />
+  </div>
+  <div class="form-inner">
+    <h3 class="question"><%= locals.q[id] %></h3>
+    <label for="question_<%= id %>">Enter Your Answer</label>
+    <input placeholder="lowercase" name="question_<%= id %>" id="question_<%= id %>" />
+    <input class="submit" name="submit" type="submit" value="Submit Answer" />
+  </div>
+</form>

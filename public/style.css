@@ -1,0 +1,416 @@
+body {
+  padding: 0;
+  background-color: black;
+  color: #fff;
+}
+h1 {text-align: center; }
+.right { color: #d4de24; text-align: center; margin-bottom: 0;}
+.right-prompt {
+  margin-top: 0;
+  text-align: center;
+  color: #d4de24;
+  font-size: 1.25rem;
+}
+.wrong { color: #a92990; text-align: center; margin-bottom: 0;}
+.wrong-prompt {
+  margin-top: 0;
+  text-align: center;
+  color: #a92990; text-align: center;
+  font-size: 1.25rem;
+}
+form {
+  max-width: 500px;
+  max-height: 400px;
+  position: absolute;
+  background: #333;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.form-inner {
+  border: 1px solid white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+form input {
+  display: block;
+  margin: .5rem auto;
+  padding:.5rem;
+  width: 50%;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+label {
+  text-align: center;
+  display: block;
+  margin:auto
+}
+.question {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.submit {
+  background-color: cadetblue;
+  border-radius: .2rem;
+  border: 0;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: .5rem;
+  width: 54%;
+}
+#puzzle-1 {
+  display: none;
+  /* position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0 0;
+  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(8, 12.5%); */
+}
+#puzzle-1 .piece {
+  display: block;
+}
+#puzzle-1 .piece > img {
+  width: 100%;
+  height: auto;
+}
+
+#puzzle-2 {
+  position: relative;
+  height: 61vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-image: url(img/HOW-hero-background.jpg);
+  background-size: cover;
+}
+#puzzle-2 .piece {
+  position: absolute;
+  width: 12.5%;
+  height: 20%;
+}
+.piece > img {
+  width: 100%;
+  height: auto;
+}
+#p1 {
+  left: 0;
+  top: 0;
+  display: block;
+}
+#p2 {
+  left: calc(12.5% * 1);
+  top: 0;
+  display: block;
+  margin-left: -4.25%;
+}
+#p2 > img {
+  width: 168%;
+}
+#p3 {
+  left: calc(12.5% * 2);
+  top: 0;
+  display: block;
+}
+#p4 {
+  left: calc(12.5% * 3);
+  top: 0;
+  display: block;
+  margin-left: -4.25%;
+}
+#p4 > img {
+  width: 168%;
+}
+#p5 {
+  left: calc(12.5% * 4);
+  top: 0;
+  display: block;
+}
+#p6 {
+  left: calc(12.5% * 5);
+  top: 0;
+  display: block;
+  margin-left: -4.25%;
+}
+#p6 > img {
+  width: 168%;
+}
+#p7 {
+  left: calc(12.5% * 6);
+  top: 0;
+  display: block;
+}
+#p8 {
+  left: calc(12.5% * 7);
+  top: 0;
+  display: block;
+  margin-left: -4.15%;
+}
+#p8 > img {
+  width: 133%;
+}
+/* Row 2 */
+#p9 {
+  left: 0;
+  top: calc(20% * 1);
+  display: block;
+}
+#p9 > img {
+  width: 133%;
+}
+#p10 {
+  left: calc(12.5% * 1);
+  top: calc(20% * 1);
+  display: block;
+  margin-top: -4.15%;
+}
+#p11 {
+  left: calc(12.5% * 2);
+  top: calc(20% * 1);
+  display: block;
+  margin-left: -4.15%;
+}
+#p11 > img {
+  width: 168%;
+}
+#p12 {
+  left: calc(12.5% * 3);
+  top: calc(20% * 1);
+  display: block;
+  margin-top: -4.15%;
+}
+#p13 {
+  left: calc(12.5% * 4);
+  top: calc(20% * 1);
+  display: block;
+  margin-left: -4.15%;
+}
+#p13 > img {
+  width: 168%;
+}
+#p14 {
+  left: calc(12.5% * 5);
+  top: calc(20% * 1);
+  display: block;
+  margin-top: -4.25%;
+}
+#p15 {
+  left: calc(12.5% * 6);
+  top: calc(20% * 1);
+  display: block;
+  margin-left: -4.15%;
+}
+#p15 > img {
+  width: 168%;
+}
+#p16 {
+  left: calc(12.5% * 7);
+  top: calc(20% * 1);
+  display: block;
+  margin-top: -4.15%;
+}
+/* Row 3 */
+#p17 {
+  left: calc(12.5% * 0);
+  top: calc(20% * 2);
+  display: block;
+  margin-top: -4.15%;
+}
+#p18 {
+  left: calc(12.5% * 1);
+  top: calc(20% * 2);
+  display: block;
+  margin-left: -4.15%;
+}
+#p18 > img {
+  width: 168%;
+}
+#p19 {
+  left: calc(12.5% * 2);
+  top: calc(20% * 2);
+  display: block;
+  margin-top: -4.15%;
+}
+#p20 {
+  left: calc(12.5% * 3);
+  top: calc(20% * 2);
+  display: block;
+  margin-left: -4.15%;
+}
+#p20 > img {
+  width: 168%;
+}
+#p21 {
+  left: calc(12.5% * 4);
+  top: calc(20% * 2);
+  display: block;
+  margin-top: -4.15%;
+}
+#p22 {
+  left: calc(12.5% * 5);
+  top: calc(20% * 2);
+  display: block;
+  margin-left: -4.15%;
+}
+#p22 > img {
+  width: 168%;
+}
+#p23 {
+  left: calc(12.5% * 6);
+  top: calc(20% * 2);
+  display: block;
+  margin-top: -4.15%;
+}
+#p24 {
+  left: calc(12.5% * 7);
+  top: calc(20% * 2);
+  display: block;
+  margin-left: -4.15%;
+}
+#p24 > img {
+  width: 133%;
+}
+/* Row 4 */
+#p25 {
+  left: calc(12.5% * 0);
+  top: calc(20% * 3);
+  display: block;
+}
+#p25 > img {
+  width: 133%;
+}
+#p26 {
+  left: calc(12.5% * 1);
+  top: calc(20% * 3);
+  display: block;
+  margin-top: -4.25%;
+}
+#p27 {
+  left: calc(12.5% * 2);
+  top: calc(20% * 3);
+  display: block;
+  margin-left: -4.25%;
+}
+#p27 > img {
+  width: 168%;
+}
+#p28 {
+  left: calc(12.5% * 3);
+  top: calc(20% * 3);
+  display: block;
+  margin-top: -4.25%;
+}
+#p29 {
+  left: calc(12.5% * 4);
+  top: calc(20% * 3);
+  display: block;
+  margin-left: -4.25%;
+}
+#p29 > img {
+  width: 168%;
+}
+#p30 {
+  left: calc(12.5% * 5);
+  top: calc(20% * 3);
+  display: block;
+  margin-top: -4.25%;
+}
+#p31 {
+  left: calc(12.5% * 6);
+  top: calc(20% * 3);
+  display: block;
+  margin-left: -4.25%;
+}
+#p31 > img {
+  width: 168%;
+}
+#p32 {
+  left: calc(12.5% * 7);
+  top: calc(20% * 3);
+  display: block;
+  margin-top: -4.25%;
+}
+/* Row 5 */
+#p33 {
+  left: calc(12.5% * 0);
+  top: calc(20% * 4);
+  display: block;
+  margin-top: -4.25%;
+}
+#p34 {
+  left: calc(12.5% * 1);
+  top: calc(20% * 4);
+  display: block;
+  margin-left: -4.25%;
+}
+#p34 > img {
+  width: 168%;
+}
+#p35 {
+  left: calc(12.5% * 2);
+  top: calc(20% * 4);
+  display: block;
+  margin-top: -4.25%;
+}
+#p36 {
+  left: calc(12.5% * 3);
+  top: calc(20% * 4);
+  display: block;
+  margin-left: -4.25%;
+}
+#p36 > img {
+  width: 168%;
+}
+#p37 {
+  left: calc(12.5% * 4);
+  top: calc(20% * 4);
+  display: block;
+  margin-top: -4.25%;
+}
+#p38 {
+  left: calc(12.5% * 5);
+  top: calc(20% * 4);
+  display: block;
+  margin-left: -4.25%;
+}
+#p38 > img {
+  width: 168%;
+}
+#p39 {
+  left: calc(12.5% * 6);
+  top: calc(20% * 4);
+  display: block;
+  margin-top: -4.25%;
+}
+#p40 {
+  left: calc(12.5% * 7);
+  top: calc(20% * 4);
+  display: block;
+  margin-left: -4.15%;
+}
+#p40 > img {
+  width: 133%;
+}
+
+.piece:hover svg path {
+ cursor: pointer;
+ fill: yellow;
+}
+#piece-1 {
+
+}
