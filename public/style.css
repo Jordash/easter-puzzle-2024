@@ -142,12 +142,14 @@ label {
 }
 .puzzle-cover h1 {
   font-size: 2rem;
+  width: 100%;
   text-align: center;
-  color: #ca7eac;
+  color: #e2e274;
 }
 .puzzle-cover h3 {
   font-size: 1rem;
-  color: #ca7eac;
+  width: 100%;
+  color: #e2e274;
 }
 @media (min-width: 700px) {
   .puzzle-cover h1 {
@@ -468,6 +470,14 @@ label {
 .piece:hover svg path {
  cursor: pointer;
  fill: yellow;
+}
+
+.direct-link-container {
+  padding: 1rem 2.5rem 2.5rem;
+  cursor: pointer;
+}
+.direct-link-container > * {
+  display: none;
 }
 
 ul { float: left; margin-right: 25px; }
