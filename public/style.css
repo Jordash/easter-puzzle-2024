@@ -1,33 +1,82 @@
 body {
   padding: 0;
-  background-color: black;
+  background-color: #d0dee7;
   color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-h1 {text-align: center; }
-.right { color: #d4de24; text-align: center; margin-bottom: 0;}
+h1 {text-align: center; font-size: 3rem; color:#4f4095; }
+
+/* Google Fonts */
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.fira-sans-medium {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.fira-sans-regular-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.fira-sans-medium-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.fira-sans-bold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+/* End Google Fonts */
+
+.intro-message {
+  max-width: 600px;
+  margin: 2rem;
+  color: #4f4095;
+}
+@media (min-width: 600px) {
+  .intro-message {
+    margin: 2rem auto;
+  }
+}
+
+.right { color: #ca7eac; text-align: center; margin-bottom: 0; font-size: 2rem;}
 .right-prompt {
   margin-top: 0;
   text-align: center;
-  color: #d4de24;
+  color: #ca7eac;
   font-size: 1.25rem;
 }
-.wrong { color: #a92990; text-align: center; margin-bottom: 0;}
+.wrong { color: #ca7eac; text-align: center; margin-bottom: 0;}
 .wrong-prompt {
   margin-top: 0;
   text-align: center;
-  color: #a92990; text-align: center;
+  color: #ca7eac; text-align: center;
   font-size: 1.25rem;
 }
-form {
+form, #answer-response-container {
   max-width: 500px;
-  max-height: 400px;
+  
+  height: auto;
   position: absolute;
   background: #333;
   z-index: 100;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 25%;
+  bottom: auto;
   margin: auto;
   padding: 2rem;
   display: flex;
@@ -37,6 +86,7 @@ form {
   border: 1px solid white;
   padding: 1rem;
   margin-top: 2rem;
+  width: 100%;
 }
 form input {
   display: block;
@@ -56,7 +106,8 @@ label {
   margin:auto
 }
 .question {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: normal;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -69,25 +120,6 @@ label {
   padding: .5rem;
   width: 54%;
 }
-#puzzle-1 {
-  display: none;
-  /* position: relative;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0 0;
-  grid-template-rows: repeat(5, 20%);
-  grid-template-columns: repeat(8, 12.5%); */
-}
-#puzzle-1 .piece {
-  display: block;
-}
-#puzzle-1 .piece > img {
-  width: 100%;
-  height: auto;
-}
 
 #puzzle-2 {
   position: relative;
@@ -98,6 +130,32 @@ label {
   display: block;
   background-image: url(img/HOW-hero-background.jpg);
   background-size: cover;
+}
+.puzzle-cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.puzzle-cover h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #ca7eac;
+}
+.puzzle-cover h3 {
+  font-size: 1rem;
+  color: #ca7eac;
+}
+@media (min-width: 700px) {
+  .puzzle-cover h1 {
+    font-size: 4rem;
+  }
+  .puzzle-cover h3 {
+    font-size: 2rem;
+  }
 }
 #puzzle-2 .piece {
   position: absolute;
@@ -411,6 +469,5 @@ label {
  cursor: pointer;
  fill: yellow;
 }
-#piece-1 {
 
-}
+ul { float: left; margin-right: 25px; }
