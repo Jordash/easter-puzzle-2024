@@ -25,11 +25,12 @@
             $(this).fadeOut('slow');
           }
         });
-        $('.direct-link-container').on('click', function(){
-          $(this).children().toggle();
+        $('.show-menu-label, .hide-menu-label').on('click', function(){
+          $('.show-menu-label').toggle();
+          $('.hide-menu-label').toggle();
+          $('.direct-link-container').toggle();
         });
       });
     </script>
   </head>
   <body>
-    

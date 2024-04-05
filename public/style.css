@@ -473,11 +473,14 @@ label {
 }
 
 .direct-link-container {
-  padding: 1rem 2.5rem 2.5rem;
-  cursor: pointer;
+  padding: 0rem 2.5rem 2.5rem;
 }
-.direct-link-container > * {
+.direct-link-container {
   display: none;
 }
+.direct-link-container a { color: #984486;}
 
-ul { float: left; margin-right: 25px; }
+ul { float: left; margin-top: 0; margin-right: 25p; list-style: none; }
+
+.show-menu-label { margin-top: 1rem; color:#4f4095; cursor: pointer; }
+.hide-menu-label { display:none; color:#4f4095; cursor: pointer; }

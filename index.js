@@ -53,7 +53,7 @@ const questions = [
   '1974 was the last year that goalies didn’t wear a what? [1]',
   'What its called one team has more players on the ice due to a penalty [2]',
   'What its called when one team has less players due to a penalty [2]',
-  'Ruth\'s punishment for murdering Sydney Snow[1]'
+  'Ruth\'s punishment for murdering Sydney Snow [1]'
 ];
 
 //Pieces Array
